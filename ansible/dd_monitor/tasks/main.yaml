@@ -9,7 +9,7 @@
         - msm_location:{{ MSM_LOCATION }}
 
 - name: Install datadog-ping
-  ansible.builtin.command: datadog-agent integration install -t datadog-ping
+  ansible.builtin.command: datadog-agent integration install -r -t datadog-ping
 
 - name: dns_check
   ansible.builtin.template:
