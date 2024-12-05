@@ -62,8 +62,8 @@ jobs:
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > messh
           echo "${{ secrets.SSH_PUBLIC_KEY }}" > messh.pub
-          chmod 600 mesh_cluster/messh
-          chmod 600 mesh_cluster/messh.pub
+          chmod 600 messh
+          chmod 600 messh.pub
           terraform validate
         working-directory: ./terraform/
 
