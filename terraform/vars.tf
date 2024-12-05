@@ -39,7 +39,7 @@ variable "system_image" {
 variable "mesh_local_user" {
   type        = string
   description = "local user username"
-  default     = "debian"
+  default     = "root"
 }
 
 variable "local_password" {

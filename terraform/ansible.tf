@@ -1,4 +1,4 @@
-resource "ansible_group" "monitor_mgt" {
+resource "ansible_host" "monitor_mgt" {
   name = "monitor_mgt"
   variables = {
     ansible_user                 = var.mesh_local_user
