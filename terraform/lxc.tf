@@ -9,7 +9,7 @@ resource "proxmox_lxc" "monitoring_host" {
   start        = true
   onboot       = true
 
-  ssh_public_keys = file("messh.pub")
+  ssh_public_keys = file("./messh.pub")
 
   rootfs {
     storage = var.proxmox_storage_location
