@@ -36,6 +36,12 @@ variable "system_image" {
   default     = "local:vztmpl/debian-12-standard_12.2-1_amd64.tar.zst"
 }
 
+variable "mesh_local_user" {
+  type        = string
+  description = "local user username"
+  default     = "debian"
+}
+
 variable "local_password" {
   type        = string
   description = "password for the local user"
