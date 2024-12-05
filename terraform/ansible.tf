@@ -7,6 +7,7 @@ resource "ansible_group" "monitor_mgt_group" {
     DATADOG_API_KEY              = var.datadog_api_key
     DATADOG_SITE                 = var.datadog_site
     MSM_LOCATION                 = var.msm_location
+    VM_HOSTNAME                  = var.hostname
   }
 }
 
