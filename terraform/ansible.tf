@@ -1,5 +1,5 @@
 resource "ansible_host" "monitor_mgt" {
-  name = "monitor_mgt"
+  name = var.vm_mgt_ip
   variables = {
     ansible_user                 = var.mesh_local_user
     ansible_ssh_private_key_file = "../terraform/messh"
