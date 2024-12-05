@@ -12,5 +12,5 @@ resource "ansible_group" "monitor_mgt_group" {
 
 resource "ansible_host" "monitor_mgt" {
   name = var.vm_mgt_ip
-  groups = [ansible_group.lb.name]
+  groups = [ansible_group.monitor_mgt_group.name]
 }
