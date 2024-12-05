@@ -10,10 +10,10 @@ on:
 
 env:
   # Secrets
-  TF_VAR_mesh_proxmox_host: ${{ secrets.TF_VAR_MESHDB_PROXMOX_HOST }}
-  TF_VAR_mesh_proxmox_token_id: ${{ secrets.TF_VAR_MESHDB_PROXMOX_TOKEN_ID }}
-  TF_VAR_mesh_proxmox_token_secret: ${{ secrets.TF_VAR_MESHDB_PROXMOX_TOKEN_SECRET }}
-  TF_VAR_mesh_local_password: ${{ secrets.TF_VAR_MESHDB_LOCAL_PASSWORD }}
+  TF_VAR_proxmox_host: ${{ secrets.TF_VAR_MESHDB_PROXMOX_HOST }}
+  TF_VAR_proxmox_token_id: ${{ secrets.TF_VAR_MESHDB_PROXMOX_TOKEN_ID }}
+  TF_VAR_proxmox_token_secret: ${{ secrets.TF_VAR_MESHDB_PROXMOX_TOKEN_SECRET }}
+  TF_VAR_local_password: ${{ secrets.TF_VAR_MESHDB_LOCAL_PASSWORD }}
   TF_VAR_datadog_api_key: ${{ secrets.DATADOG_API_KEY }}
   TF_VAR_datadog_site: ${{ secrets.DATADOG_SITE }}
   # Credentials for deployment to AWS
