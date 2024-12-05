@@ -1,0 +1,20 @@
+name: Deploy Environments
+permissions: read-all
+
+on:
+  push:
+    branches:
+      - main
+      - james/init
+  workflow_dispatch:
+    branches:
+      - main
+
+jobs:
+  deploy_dev3:
+    name: Deploy dev3
+    uses: ./.github/workflows/deploy_msm.yaml
+    with:
+      environment: dev3
+    secrets: inherit
+    #if: github.ref == 'refs/heads/main'

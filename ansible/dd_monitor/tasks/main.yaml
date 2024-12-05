@@ -1,0 +1,51 @@
+- name: Import the Datadog Agent role from the Datadog collection
+  ansible.builtin.import_role:
+    name: datadog.dd.agent
+  vars:
+    datadog_api_key: "{{ DATADOG_API_KEY }}"
+    datadog_site: "{{ DATADOG_SITE }}"
+    datadog_config:
+      tags:
+        - msm_location:{{ MSM_LOCATION }}
+
+- name: Install datadog-ping
+  ansible.builtin.command: datadog-agent integration install -t datadog-ping
+
+- name: dns_check
+  ansible.builtin.template:
+    src: ../templates/dns_check.d.conf.yaml.j2
+    dest: /etc/datadog-agent/conf.d/dns_check.d/conf.yaml
+    mode: "600"
+    owner: dd-agent
+    group: dd-agent
+
+- name: http_check
+  ansible.builtin.template:
+    src: ../templates/http_check.d.conf.yaml.j2
+    dest: /etc/datadog-agent/conf.d/http_check.d/conf.yaml
+    mode: "600"
+    owner: dd-agent
+    group: dd-agent
+
+- name: ping
+  ansible.builtin.template:
+    src: ../templates/ping.d.conf.yaml.j2
+    dest: /etc/datadog-agent/conf.d/ping.d/conf.yaml
+    mode: "600"
+    owner: dd-agent
+    group: dd-agent
+
+- name: tcp_check
+  ansible.builtin.template:
+    src: ../templates/tcp_check.d.conf.yaml.j2
+    dest: /etc/datadog-agent/conf.d/tcp_check.d/conf.yaml
+    mode: "600"
+    owner: dd-agent
+    group: dd-agent
+
+- name: Reload datadog
+  ansible.builtin.systemd_service:
+    name: datadog-agent
+    state: restarted
+    enabled: true
+    daemon_reload: true

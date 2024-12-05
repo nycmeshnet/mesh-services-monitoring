@@ -1,0 +1,4 @@
+- hosts: monitor_mgt 
+  become: true
+  roles:
+    - role: dd_monitor
