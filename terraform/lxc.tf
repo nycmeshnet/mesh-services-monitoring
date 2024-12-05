@@ -5,6 +5,7 @@ resource "proxmox_lxc" "monitoring_host" {
   ostemplate   = var.system_image
   password     = var.local_password
   cores        = 2
+  memory       = 1024
   unprivileged = true
   start        = true
   onboot       = true
