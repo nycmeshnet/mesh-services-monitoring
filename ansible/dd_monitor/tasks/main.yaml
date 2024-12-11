@@ -11,9 +11,10 @@
         - msm_location:{{ MSM_LOCATION }}
     datadog_additional_groups: "systemd-journal"
     datadog_checks:
-      logs:
-        - type: journald
-          path: /var/log/journal/
+      journald:
+        logs:
+          - type: journald
+            path: /var/log/journal/
 
 - name: Install datadog-ping
   ansible.builtin.command: datadog-agent integration install -r -t datadog-ping==1.0.2
