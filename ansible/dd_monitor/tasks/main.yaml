@@ -1,3 +1,11 @@
+- name: Install deps
+  ansible.builtin.apt:
+    lock_timeout: 120
+    update_cache: true
+    pkg:
+      - ca-certificates
+      - iputils-ping
+
 - name: Import the Datadog Agent role from the Datadog collection
   ansible.builtin.import_role:
     name: datadog.dd.agent
