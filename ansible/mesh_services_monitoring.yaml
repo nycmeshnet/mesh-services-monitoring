@@ -1,4 +1,5 @@
-- hosts: monitor_mgt 
+- name: Mesh Services Monitoring
+  hosts: monitor_mgt
   become: true
   roles:
     - role: dd_monitor
