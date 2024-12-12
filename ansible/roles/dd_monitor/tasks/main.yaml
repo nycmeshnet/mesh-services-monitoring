@@ -26,6 +26,7 @@
 
 - name: Install datadog-ping
   ansible.builtin.command: datadog-agent integration install -r -t datadog-ping==1.0.2
+  creates: /opt/datadog-agent/embedded/lib/python*/site-packages/datadog_checks/ping/ping.py
 
 - name: Deploy dns_check
   ansible.builtin.template:
