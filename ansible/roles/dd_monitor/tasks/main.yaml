@@ -6,6 +6,20 @@
       - ca-certificates
       - iputils-ping
 
+- name: Import the ssh_config role from the nycmesh.common collection
+  ansible.builtin.import_role:
+    name: nycmesh.common.ssh_config
+
+- name: Import the mesh_dns role from the nycmesh.common collection
+  ansible.builtin.import_role:
+    name: nycmesh.common.mesh_dns
+  vars:
+    extra_resolvers: "9.9.9.9"
+
+- name: Import the support_account role from the nycmesh.common collection
+  ansible.builtin.import_role:
+    name: nycmesh.common.support_account
+
 - name: Import the Datadog Agent role from the Datadog collection
   ansible.builtin.import_role:
     name: datadog.dd.agent

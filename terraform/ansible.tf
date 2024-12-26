@@ -8,6 +8,7 @@ resource "ansible_group" "monitor_mgt_group" {
     DATADOG_SITE                 = var.datadog_site
     MSM_LOCATION                 = var.msm_location
     VM_HOSTNAME                  = var.hostname
+    local_password               = var.local_password
   }
 }
 
