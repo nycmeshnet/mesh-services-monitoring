@@ -1,0 +1,13 @@
+# https://github.com/DataDog/integrations-extras/blob/master/ping/datadog_checks/ping/data/conf.yaml.example
+
+init_config:
+  service: mesh_services_monitoring
+
+instances:
+    # NN177 NTP
+  - host: 10.70.177.5
+    collect_response_time: true
+  
+    # PH 713-af24-3461
+  - host: 10.70.179.10
+    collect_response_time: true

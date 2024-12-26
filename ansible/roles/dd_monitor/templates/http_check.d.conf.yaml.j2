@@ -1,0 +1,83 @@
+init_config:
+  service: mesh_services_monitoring
+
+instances:
+  - name: 5107-eNB
+    url: https://10.70.183.17
+
+  - name: Grand Street Guild Displays
+    url: http://gsg-displays.nycmesh.net
+    service: GSG
+  - name: GSG Community Room Computers Proxmox VE
+    url: https://10.70.188.11:8006
+    service: GSG
+  - name: GSG Community Room Computers TP-Link OpenWRT
+    url: http://10.70.188.10
+    service: GSG
+
+  - name: Mastodon
+    url: https://mastodon.nycmesh.net
+    service: mastodon
+
+  - name: NN177 FiOS-Emby
+    url: https://htpc.cloud:8920
+  - name: NN177 FiOS-pfSense
+    url: https://pf.hostdome.com:7071
+  - name: NN177 af60lr 
+    url: https://10.96.44.80
+  - name: NN177 netpower7r
+    url: http://10.96.44.70
+  - name: NN177 Omni1
+    url: http://10.96.44.67
+  - name: NN177 Omni2
+    url: http://10.96.44.72
+  - name: NN177 RB
+    url: http://10.69.1.77
+  - name: NN177 SXT
+    url: http://10.69.1.177
+
+  - name: Node Explorer
+    url: http://node-explorer.andrew.mesh.nycmesh.net/explorer
+    service: node_explorer
+
+  - name: NYC KML
+    url: https://dantonio.tech/programs/nyckml/
+    service: NYCKML
+
+  - name: PH 3461-core
+    url: http://10.69.34.61
+  - name: PH 3461-waveap-north
+    url: https://10.70.179.21
+
+  - name: Stats
+    url: https://stats.nycmesh.net
+    service: stats
+  - name: Stats New
+    url: https://stats-new.nycmesh.net
+    service: stats-new
+
+  - name: Website map
+    url: https://map.nycmesh.net
+    service: website_map
+
+  - name: Wiki
+    url: https://wiki.nycmesh.net
+    service: wiki
+
+  - name: Meshdb
+    url: https://db.nycmesh.net
+  - name: Meshforms
+    url: https://forms.nycmesh.net
+  - name: Meshdb Admin Map
+    url: https://adminmap.db.nycmesh.net
+  - name: LOS
+    url: https://los.nycmesh.net
+  - name: LOS Backend
+    url: https://los-backend.db.nycmesh.net
+
+  - name: Meshdb dev
+    url: https://devdb.nycmesh.net
+  - name: Meshforms dev
+    url: https://devdb.nycmesh.net
+  - name: Meshdb Admin Map dev
+    url: https://adminmap.devdb.nycmesh.net

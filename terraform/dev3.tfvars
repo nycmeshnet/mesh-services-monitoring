@@ -1,0 +1,6 @@
+proxmox_node             = "jon"
+proxmox_storage_location = "local-lvm"
+hostname                 = "nycmesh-713-msm-1"
+vm_mgt_ip                = "10.70.90.164"
+vm_mgt_default_gateway   = "10.70.90.1"
+msm_location             = "SN3"
